@@ -1,7 +1,11 @@
 <template>
   <div class="view flex flex-col place-items-start">
     <h1>Index page</h1>
-
+    <div
+      class="info border p-12 text-center hover:bg-red-900 hover:text-white cursor-pointer"
+    >
+      <span class="text-3xl">本网站正在更新中(2022.7.31)</span>
+    </div>
     <div class="btn-group flex gap-0">
       <button
         class="px-3 py-2 bg-black text-white hover:bg-indigo-700"
