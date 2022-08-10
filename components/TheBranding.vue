@@ -1,5 +1,5 @@
 <template>
-  <div class="branding p-2 w-36 md:w-52">
+  <div class="branding">
     <nuxt-link to="/">
       <div class="logo">
         <img src="~/assets/images/branding/logo.svg" alt="Devibe Logo" />

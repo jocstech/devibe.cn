@@ -1,7 +1,7 @@
 <template>
   <header class="bg-gray-50 text-black shadow-xl">
-    <div class="inner flex">
-      <TheBranding />
+    <div class="md:container md:mx-auto flex items-center">
+      <TheBranding class="flex-shrink-0 m-2 w-120px" />
       <nav class="px-2 py-3 flex w-full justify-center">
         <ul class="flex justify-center gap-3 text-xl capitalize">
           <li
