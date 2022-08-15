@@ -9,6 +9,7 @@ export default defineNuxtConfig({
   modules: ['nuxt-windicss'],
   app: {
     head: {
+      title: 'The Best Developer Online Community in China',
       link: [
         {
           rel: 'stylesheet',
@@ -17,7 +18,7 @@ export default defineNuxtConfig({
       ],
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
-      noscript: [{ children: 'Javascript is required' }],
+      noscript: [{ children: 'Javascript is required!' }],
     },
   },
   css: ['@/assets/css/main.scss'],
