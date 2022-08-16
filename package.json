@@ -9,6 +9,6 @@
   "devDependencies": {
     "nuxt": "3.0.0-rc.6",
     "nuxt-windicss": "^2.5.0",
-    "sass": "^1.54.3"
+    "sass": "^1.54.4"
   }
 }
