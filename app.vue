@@ -5,6 +5,7 @@
     <div class="w-full h-52px"></div>
     <NuxtPage />
     <TheFooter />
+    <SharedModal></SharedModal>
   </NuxtLayout>
 </template>
 

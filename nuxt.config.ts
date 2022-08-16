@@ -9,10 +9,14 @@ export default defineNuxtConfig({
   modules: ['nuxt-windicss'],
   app: {
     head: {
+      htmlAttrs: [
+        {
+          lang: 'en',
+        },
+      ],
       title: 'The Best Developer Online Community in China',
       charset: 'utf-8',
-      viewport:
-        'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no',
+      viewport: 'width=device-width, initial-scale=1.0',
       noscript: [{ children: 'Javascript is required!' }],
     },
   },
