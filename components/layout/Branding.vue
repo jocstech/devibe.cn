@@ -2,7 +2,7 @@
   <div class="branding flex flex-col justify-center">
     <nuxt-link to="/">
       <div class="logo">
-        <img src="~/assets/images/branding/logo.svg" alt="Devibe Logo" />
+        <img src="/images/branding/logo.svg" alt="Devibe Logo" />
       </div>
     </nuxt-link>
   </div>

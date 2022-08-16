@@ -5,9 +5,15 @@ body {
 
 body,
 html {
-  font-family: PingFangSC, helvetica neue, hiragino sans gb, arial, microsoft yahei ui, microsoft yahei, simsun,
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
   scroll-behavior: smooth;
+  font-family: PingFangSC, helvetica neue, hiragino sans gb, arial, microsoft yahei ui, microsoft yahei, simsun,
+    sans-serif;
+}
+// Hide the scrollbar
+body::-webkit-scrollbar {
+  display: none;
+  width: 0;
 }

@@ -2,7 +2,7 @@
   <NuxtLayout>
     <NuxtLoadingIndicator />
     <TheHeader class="fixed top-0" />
-    <div id="global-header-spacer" class="w-full"></div>
+    <div class="w-full h-52px"></div>
     <NuxtPage />
     <TheFooter />
   </NuxtLayout>
