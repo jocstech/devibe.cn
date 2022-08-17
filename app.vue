@@ -1,18 +1,31 @@
 <template>
   <NuxtLayout>
     <NuxtLoadingIndicator />
-    <TheHeader class="fixed top-0" />
+    <TheHeader :class="headerClass" />
     <div class="w-full h-52px"></div>
     <NuxtPage />
     <TheFooter />
-    <SharedModal></SharedModal>
   </NuxtLayout>
 </template>
 
 <script setup lang="ts">
-import { onMounted } from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
+const headerClass = ref('');
+let scrollHandler;
+onMounted(() => {
+  scrollHandler = window.addEventListener(
+    'scroll',
+    (e) => (headerClass.value = window.scrollY > 60 ? 'fixedHeader' : '')
+  );
+});
 
-onMounted(() => {});
+onUnmounted(() => {
+  window.removeEventListener('scroll', scrollHandler);
+});
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.fixedHeader {
+  @apply fixed top-0;
+}
+</style>
