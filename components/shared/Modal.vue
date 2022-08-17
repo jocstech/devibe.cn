@@ -12,7 +12,7 @@
           @click="hide"
         ></div>
         <div
-          class="p-6 bg-white rounded-lg text-sm sm:text-lg pt-6 shadow-lg w-11/12 sm:w-550px fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50"
+          class="p-6 bg-white rounded-lg text-sm sm:text-lg pt-6 shadow-lg w-11/12 sm:w-380px fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50"
         >
           <div class="pb-6 text-center" v-if="props.title || props.subtitle">
             <h3
