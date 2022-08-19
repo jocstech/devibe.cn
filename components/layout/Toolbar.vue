@@ -7,20 +7,19 @@
     </div>
     <div
       class="auth transition bg-blue-900 hover:bg-blue-800 text-white px-3 flex items-center justify-center whitespace-nowrap cursor-pointer text-sm"
-      @click="openAuthModal"
+      @click="gotoLoginPage"
     >
       <SharedIcon class="filter invert w-4 md:w-6" name="user" />
       <span class="-md:hidden">登陆</span>
     </div>
-    <InstanceAuthModal :show="showAuthModal" />
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue';
-const showAuthModal = ref(false);
+const router = useRouter();
 
-function openAuthModal() {
-  showAuthModal.value = true;
+function gotoLoginPage() {
+  router.push('/auth/login');
 }
 </script>

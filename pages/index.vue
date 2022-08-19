@@ -1,6 +1,6 @@
 <template>
   <div
-    class="container mx-auto view flex flex-col place-items-center gap-6 p-4 sm:p-0"
+    class="container mx-auto view flex flex-col place-items-center gap-6 p-4 sm:p-0 animate-animated animate-fadeIn"
   >
     <div class="h-80px"></div>
     <h1>首页内容</h1>
@@ -27,7 +27,7 @@
       </button>
     </div>
 
-    <article class="text-center w-full">
+    <article class="prose text-center w-full">
       <h1>大标题</h1>
       <h2>小标题</h2>
       <p>

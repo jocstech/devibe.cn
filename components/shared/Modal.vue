@@ -12,7 +12,7 @@
           @click="hide"
         ></div>
         <div
-          class="p-6 bg-white rounded-lg text-sm sm:text-lg pt-6 shadow-lg w-11/12 sm:w-380px fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50"
+          class="p-6 bg-white rounded-lg text-sm sm:text-lg pt-6 shadow-lg w-11/12 sm:w-352px fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50"
         >
           <div class="pb-6 text-center" v-if="props.title || props.subtitle">
             <h3
@@ -37,32 +37,32 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 const props = defineProps(['show', 'title', 'subtitle']);
-const emit = defineEmits(['close', 'closed', 'opened', 'submit']);
+const emit = defineEmits(['open', 'opened', 'close', 'closed', 'submit']);
 
 function hide() {
   console.log('close click registered');
   emit('close');
 }
-
+function beforeEnter() {
+  emit('open');
+}
 function afterEnter() {
   emit('opened');
 }
-
-function afterLeave() {
-  emit('closed');
-}
-
 function beforeLeave() {
   emit('close');
+}
+function afterLeave() {
+  emit('closed');
 }
 </script>
 
 <style scoped lang="scss">
 .fade-enter-active {
-  animation: fade-in 0.2s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  animation: fade-in 0.2s cubic-bezier(0.86, 0, 0.07, 1);
 }
 
 .fade-leave-active {
-  animation: fade-out 0.2s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  animation: fade-out 0.2s cubic-bezier(0.86, 0, 0.07, 1);
 }
 </style>
