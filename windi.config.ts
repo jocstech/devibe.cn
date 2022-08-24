@@ -3,7 +3,9 @@ import { defineConfig } from 'windicss/helpers';
 export default defineConfig({
   darkMode: 'class',
   plugins: [
-    require('windicss/plugin/typography'),
+    require('windicss/plugin/typography')({
+      dark: true,
+    }),
     require('@windicss/plugin-animations')({
       settings: {
         animatedSpeed: 1000,
@@ -15,4 +17,10 @@ export default defineConfig({
       },
     }),
   ],
+  shortcuts: {
+    btn: 'py-2 px-3 rounded shadow',
+    'btn-green': 'text-white bg-green-500 hover:bg-green-700',
+    input: 'py-2 px-3 rounded',
+    'input-bordered': 'border border-black dark:border-dark-800',
+  },
 });

@@ -1,10 +1,11 @@
 <template>
-  <img class="icon" :src="src" :alt="props.name" />
+  <img class="icon" :src="`/images/icons/svg/${name}.svg`" :alt="name" />
 </template>
 
 <script lang="ts" setup>
+import { toRefs } from 'vue';
 const props = defineProps(['name']);
-const src = `/images/icons/svg/${props.name}.svg`;
+const { name } = toRefs(props);
 </script>
 
 <style lang="scss" scoped></style>

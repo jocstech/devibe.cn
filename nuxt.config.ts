@@ -6,7 +6,7 @@ export default defineNuxtConfig({
   typescript: {
     shim: false,
   },
-  modules: ['nuxt-windicss'],
+  modules: ['@vueuse/nuxt', 'nuxt-windicss'],
   app: {
     head: {
       htmlAttrs: [
@@ -14,7 +14,8 @@ export default defineNuxtConfig({
           lang: 'en',
         },
       ],
-      title: 'The Best Developer Online Community in China',
+      title: 'The Best Developer Community',
+      titleTemplate: '%s | The Best Developer Community',
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1.0',
       noscript: [{ children: 'Javascript is required!' }],
@@ -48,5 +49,9 @@ export default defineNuxtConfig({
       ],
     },
   },
-  css: ['@/assets/css/main.scss','@/assets/css/typography.scss', '@/assets/css/animation.scss'],
+  css: [
+    '@/assets/css/main.scss',
+    '@/assets/css/typography.scss',
+    '@/assets/css/animation.scss',
+  ],
 });

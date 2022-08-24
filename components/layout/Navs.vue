@@ -8,7 +8,7 @@
       <li class="cursor-pointer" v-for="nav of navs" :key="nav.text">
         <nuxt-link
           :to="nav.to"
-          class="transition p-1 rounded-sm text-gray-500 hover:text-gray-800"
+          class="transition p-1 rounded-sm text-gray-500 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white"
           >{{ nav.text }}</nuxt-link
         >
       </li>
@@ -18,8 +18,7 @@
 
 <style lang="scss" scoped>
 .router-link-active {
-  outline: 1px solid black;
-  color: black;
+  @apply outline-current text-black dark:outline-white dark:text-white;
 }
 </style>
 

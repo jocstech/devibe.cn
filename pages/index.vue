@@ -1,35 +1,17 @@
 <template>
   <div
-    class="container mx-auto view flex flex-col place-items-center gap-6 p-4 sm:p-0 animate-animated animate-fadeIn"
+    class="container mx-auto view flex flex-col place-items-center gap-6 my-16 p-4 sm:p-0 animate-animated animate-fadeIn"
   >
-    <div class="h-80px"></div>
-    <h1>首页内容</h1>
-    <div
-      class="info transition border rounded p-12 text-center hover:bg-red-900 hover:text-white cursor-pointer"
-    >
-      <span class="text-3xl">本网站正在更新中(2022.7.31)</span>
-    </div>
-    <div class="btn-group flex gap-0">
-      <button
-        class="px-3 py-2 bg-black text-white hover:bg-indigo-700"
-        @click="increment"
-      >
-        ADD+
-      </button>
-      <div class="current-value">
-        <div class="px-6 border text-4xl">{{ count }}</div>
-      </div>
-      <button
-        class="px-3 py-2 bg-black text-white hover:bg-indigo-700"
-        @click="reduction"
-      >
-        SUB-
-      </button>
+    <div class="input-group">
+      <button class="btn btn-green" @click="increment">ADD+</button>
+      <input type="number" class="input input-bordered" v-model="count" />
+      <button class="btn btn-green" @click="reduction">MINS-</button>
     </div>
 
-    <article class="prose text-center w-full">
+    <article class="prose dark:prose-indigo text-center w-full">
       <h1>大标题</h1>
       <h2>小标题</h2>
+      <a href="#">Link</a>
       <p>
         汉皇重色思倾国，御宇多年求不得。<br />
         杨家有女初长成，养在深闺人未识。<br />
@@ -97,8 +79,8 @@
 </template>
 
 <script setup lang="ts">
-definePageMeta({
-  title: 'Home Page',
+useHead({
+  title: 'Home',
 });
 
 const count = ref(0);

@@ -1,6 +1,6 @@
 <template>
-  <div class="flex flex-col place-items-center p-6">
-    <h1 class="text-3xl">Project of 'The Lift'</h1>
+  <div class="min-h-screen-lg flex flex-col place-items-center p-6">
+    <h1 class="prose text-3xl">Project of 'The Lift'</h1>
     <div class="view border">
       <canvas ref="canvasRef"></canvas>
     </div>

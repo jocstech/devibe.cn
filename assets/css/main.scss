@@ -48,6 +48,10 @@ body::-webkit-scrollbar {
     clear: both;
   }
 
+  input {
+    @apply dark:bg-dark-400;
+  }
+
   input[type="text"],
   input[type="password"] {
     outline: unset;
@@ -83,4 +87,8 @@ body::-webkit-scrollbar {
       text-decoration: underline;
     }
   }
+}
+
+.icon-responsive {
+  @apply w-4 sm:w-4 md:w-5 lg:w-6 xl:w-7;
 }

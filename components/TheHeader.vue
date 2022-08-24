@@ -1,8 +1,7 @@
 <template>
   <header
-    ref="header"
     :class="downScrolled ? 'scrollDown' : 'touchTop'"
-    class="fixed top-0 w-full bg-gray-50 text-black shadow-xl"
+    class="fixed top-0 w-full bg-gray-50 dark:bg-dark-900 text-black dark:text-white shadow-xl dark:shadow-none z-20"
   >
     <div class="sm:container sm:mx-auto flex justify-between">
       <LayoutBranding class="flex-shrink-0 m-2 w-90px md:w-120px" />
@@ -24,18 +23,11 @@
 </style>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue';
-const downScrolled = ref(false);
-let scrollHandler;
+import { ref, computed } from 'vue';
+import { useWindowScroll } from '@vueuse/core';
 
-onMounted(() => {
-  scrollHandler = window.addEventListener(
-    'scroll',
-    (e) => (downScrolled.value = window.scrollY > 200)
-  );
-});
-
-onUnmounted(() => {
-  window.removeEventListener('scroll', scrollHandler);
+const { x, y } = useWindowScroll();
+const downScrolled = computed(() => {
+  return x.value > 300;
 });
 </script>
