@@ -3,7 +3,7 @@
     class="px-2 py-3 flex w-full justify-center whitespace-nowrap overflow-hidden <sm:hidden"
   >
     <ul
-      class="flex justify-center gap-3 text-xs sm:text-sm md:text-md lg:text-lg xl:text-xl capitalize"
+      class="flex justify-center gap-3 text-xs font-300 sm:text-sm md:text-md lg:text-lg xl:text-xl capitalize"
     >
       <li class="cursor-pointer" v-for="nav of navs" :key="nav.text">
         <nuxt-link

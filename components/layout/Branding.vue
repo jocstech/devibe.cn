@@ -2,8 +2,7 @@
   <div class="branding flex flex-col justify-center">
     <nuxt-link to="/">
       <div class="logo">
-        <img v-if="isDark" :src="logoDark" alt="Devibe.cn Logo" />
-        <img v-else :src="logoLight" alt="Devibe.cn Logo" />
+        <img :src="isDark ? logoDark : logoLight" alt="Devibe.cn Logo" />
       </div>
     </nuxt-link>
   </div>
