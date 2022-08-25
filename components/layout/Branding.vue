@@ -9,7 +9,6 @@
 </template>
 
 <script setup lang="ts">
-import { isDark } from '@/composables';
 const logoLight = '/images/branding/logo.svg';
 const logoDark = '/images/branding/logo-dark.svg';
 </script>

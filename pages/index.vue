@@ -2,6 +2,11 @@
   <div
     class="container mx-auto view flex flex-col place-items-center gap-6 my-16 p-4 sm:p-0 animate-animated animate-fadeIn"
   >
+    <UseImage v-for="n of 100" :src="`https://via.placeholder.com/${1 + n}`">
+      <template #loading> Loading.. </template>
+      <template #error> Failed </template>
+    </UseImage>
+
     <div class="input-group">
       <button class="btn btn-green" @click="increment">ADD+</button>
       <input type="number" class="input input-bordered" v-model="count" />
@@ -79,6 +84,8 @@
 </template>
 
 <script setup lang="ts">
+import { UseImage } from '@vueuse/components';
+
 useHead({
   title: 'Home',
 });
