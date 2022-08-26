@@ -1,6 +1,6 @@
 <template>
   <NuxtLayout>
-    <div class="bg-light-100 dark:bg-dark-800">
+    <div class="bg-base-lightest dark:bg-base-darkest">
       <NuxtLoadingIndicator />
       <TheHeader />
       <NuxtPage />

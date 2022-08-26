@@ -1,5 +1,11 @@
 {
-  "name": "App",
+  "name": "Devibe.cn",
+  "short_name": "DeVibe",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#007ee5",
+  "background_color": "#ffffff",
+  "description": "Dev + Vibe = The Best Developer Community",
   "icons": [
     {
       "src": "/favicons/android-icon-36x36.png",

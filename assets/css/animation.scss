@@ -30,10 +30,11 @@
 @keyframes fade-down {
   from {
     opacity: 0;
-    transform: translateY(-100%) scaleY(0);
+    transform: translateY(-100%);
+    box-shadow: none;
   }
   to {
     opacity: 1;
-    transform: translateY(0) scaleY(1);
+    transform: translateY(0);
   }
 }

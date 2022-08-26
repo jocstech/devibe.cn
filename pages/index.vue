@@ -2,15 +2,15 @@
   <div
     class="container mx-auto view flex flex-col place-items-center gap-6 my-16 p-4 sm:p-0 animate-animated animate-fadeIn"
   >
-    <UseImage v-for="n of 100" :src="`https://via.placeholder.com/${1 + n}`">
+    <!-- <UseImage v-for="n of 100" :src="`https://via.placeholder.com/${1 + n}`">
       <template #loading> Loading.. </template>
       <template #error> Failed </template>
-    </UseImage>
+    </UseImage> -->
 
-    <div class="input-group">
-      <button class="btn btn-green" @click="increment">ADD+</button>
-      <input type="number" class="input input-bordered" v-model="count" />
-      <button class="btn btn-green" @click="reduction">MINS-</button>
+    <div class="input-inline">
+      <button class="btn btn-primary" @click="increment">ADD+</button>
+      <input type="number" class="input" v-model="count" />
+      <button class="btn btn-primary" @click="reduction">MINS-</button>
     </div>
 
     <article class="prose dark:prose-indigo text-center w-full">

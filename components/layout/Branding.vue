@@ -11,6 +11,9 @@
 <script setup lang="ts">
 const logoLight = '/images/branding/logo.svg';
 const logoDark = '/images/branding/logo-dark.svg';
+const logoMono = '/images/branding/logo-mono.svg';
+
+const isOnTop = useOnTop();
 </script>
 
 <style scoped lang="scss"></style>

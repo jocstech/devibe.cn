@@ -17,7 +17,7 @@
           <input type="radio" />
           <span> 我已阅读并同意<em>服务协议</em>和<em>隐私政策</em></span>
         </div>
-        <input class="btn cursor-pointer" type="submit" value="立即登陆" />
+        <input class="cursor-pointer" type="submit" value="立即登陆" />
       </div>
     </form>
   </div>

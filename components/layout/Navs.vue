@@ -3,12 +3,12 @@
     class="px-2 py-3 flex w-full justify-center whitespace-nowrap overflow-hidden <sm:hidden"
   >
     <ul
-      class="flex justify-center gap-3 text-xs font-300 sm:text-sm md:text-md lg:text-lg xl:text-xl capitalize"
+      class="flex justify-center gap-3 text-xs font-light sm:text-sm md:text-md lg:text-lg xl:text-xl capitalize"
     >
       <li class="cursor-pointer" v-for="nav of navs" :key="nav.text">
         <nuxt-link
           :to="nav.to"
-          class="transition p-1 rounded-sm text-gray-500 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white"
+          class="transition p-1 rounded-sm hover:text-accent dark:hover:text-accent-dark"
           >{{ nav.text }}</nuxt-link
         >
       </li>
@@ -17,8 +17,8 @@
 </template>
 
 <style lang="scss" scoped>
-.router-link-active {
-  @apply outline-current text-black dark:outline-white dark:text-white;
+.router-link-exact-active {
+  @apply text-primary;
 }
 </style>
 
@@ -42,11 +42,11 @@ const navs = ref([
   },
   {
     to: '/projects/the-lift',
-    text: 'project 3',
+    text: 'believes',
   },
   {
     to: '/projects/the-lift',
-    text: 'project 4',
+    text: 'about me',
   },
 ]);
 </script>

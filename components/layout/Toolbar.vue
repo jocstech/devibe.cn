@@ -1,7 +1,7 @@
 <template>
   <div class="toolbar flex">
     <div
-      class="search transition bg-indigo-700 hover:bg-indigo-600 px-3 flex items-center justify-center text-white flex items-center justify-center cursor-pointer"
+      class="search transition bg-secondary hover:bg-indigo-600 px-3 flex items-center justify-center text-white flex items-center justify-center cursor-pointer"
     >
       <svg class="icon-responsive" width="32" height="32" viewBox="0 0 32 32">
         <path
@@ -11,7 +11,7 @@
       </svg>
     </div>
     <div
-      class="auth transition bg-indigo-800 hover:bg-indigo-700 text-white px-3 flex items-center justify-center whitespace-nowrap cursor-pointer text-sm"
+      class="auth transition bg-primary dark:bg-primary-dark hover:bg-indigo-700 text-white px-3 flex items-center justify-center whitespace-nowrap cursor-pointer text-sm"
       @click="gotoLoginPage"
     >
       <svg class="icon-responsive" width="32" height="32" viewBox="0 0 32 32">
