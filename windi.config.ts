@@ -55,6 +55,7 @@ export default defineConfig({
   shortcuts: {
     btn: 'py-2 px-3 rounded shadow',
     'btn-primary': 'text-white bg-primary hover:bg-secondary',
+    'btn-loading': 'text-white bg-green-500 cursor-not-allowed',
     input: 'py-2 px-3 rounded',
     'input-bordered': 'border border-black dark:border-dark-800',
   },

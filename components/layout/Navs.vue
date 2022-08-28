@@ -42,11 +42,11 @@ const navs = ref([
   },
   {
     to: '/projects/the-lift',
-    text: 'believes',
+    text: 'about me',
   },
   {
-    to: '/projects/the-lift',
-    text: 'about me',
+    to: '/profile',
+    text: 'profile',
   },
 ]);
 </script>

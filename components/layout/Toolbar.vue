@@ -10,7 +10,22 @@
         />
       </svg>
     </div>
+
     <div
+      v-if="status"
+      class="auth transition bg-primary dark:bg-primary-dark hover:bg-indigo-700 text-white px-3 flex items-center justify-center whitespace-nowrap cursor-pointer text-sm"
+      @click="gotoProfilePage"
+    >
+      <img
+        class="rounded-full w-8 p-1px outline outline-light-800"
+        src="https://picsum.photos/200"
+        :alt="user.username"
+      />
+      <span class="pl-1">{{ user.nickname }}</span>
+    </div>
+
+    <div
+      v-else
       class="auth transition bg-primary dark:bg-primary-dark hover:bg-indigo-700 text-white px-3 flex items-center justify-center whitespace-nowrap cursor-pointer text-sm"
       @click="gotoLoginPage"
     >
@@ -22,6 +37,7 @@
       </svg>
       <span class="-md:hidden">登陆</span>
     </div>
+
     <div class="flex-center w-8 md:w-14">
       <SharedThemeToggle />
     </div>
@@ -31,8 +47,13 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 
+const { status, user } = useAuth();
+
 const router = useRouter();
 function gotoLoginPage() {
   router.push('/auth/login');
+}
+function gotoProfilePage() {
+  router.push('/profile');
 }
 </script>

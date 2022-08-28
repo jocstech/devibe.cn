@@ -831,6 +831,15 @@
   resolved "https://registry.yarnpkg.com/@vueuse/head/-/head-0.7.9.tgz#888ab87667ab6dbe6edba10d176fa91c1b0ec021"
   integrity sha512-5wnRiH2XIUSLLXJDLDDTcpvAg5QXgTIVZl46AU7to/T91KHsdBLHSE4WhRO7kP0jbkAhlxnx64E29cQtwBrMjg==
 
+"@vueuse/integrations@^9.1.1":
+  version "9.1.1"
+  resolved "https://registry.yarnpkg.com/@vueuse/integrations/-/integrations-9.1.1.tgz#2397f6e53a33ef984c7a3625fc2cc14daa780a87"
+  integrity sha512-RVRio67rogVIV8e1Uov93JuxrE7UXhRm2B1pzdTAd+/oBxo4E3WaoXo/naI3kW1quvlOUv+g1/6goyGQoIGSow==
+  dependencies:
+    "@vueuse/core" "9.1.1"
+    "@vueuse/shared" "9.1.1"
+    vue-demi "*"
+
 "@vueuse/metadata@9.1.1":
   version "9.1.1"
   resolved "https://registry.yarnpkg.com/@vueuse/metadata/-/metadata-9.1.1.tgz#b3fe4b97e62096f7566cd8eb107c503998b2c9a6"
@@ -2694,6 +2703,11 @@ jsonfile@^6.0.1:
     universalify "^2.0.0"
   optionalDependencies:
     graceful-fs "^4.1.6"
+
+jwt-decode@^3.1.2:
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/jwt-decode/-/jwt-decode-3.1.2.tgz#3fb319f3675a2df0c2895c8f5e9fa4b67b04ed59"
+  integrity sha512-UfpWE/VZn0iP50d8cz9NrZLM9lSWhcJ+0Gt/nm4by88UL+J1SiKN8/5dkjMmbEzwL2CAe+67GsegCbIKtbp75A==
 
 klona@^2.0.5:
   version "2.0.5"

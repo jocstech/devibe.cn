@@ -2,11 +2,6 @@ import { defineNuxtConfig } from 'nuxt';
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-  // If you have enabled Take Over Mode or installed the TypeScript Vue Plugin (Volar), you can disable generating the shim for *.vue files:
-  typescript: {
-    shim: false,
-  },
-  modules: ['@vueuse/nuxt', 'nuxt-windicss'],
   app: {
     head: {
       htmlAttrs: [
@@ -54,4 +49,16 @@ export default defineNuxtConfig({
     '@/assets/css/typography.scss',
     '@/assets/css/animation.scss',
   ],
+  modules: ['@vueuse/nuxt', 'nuxt-windicss'],
+  runtimeConfig: {
+    apiSecret: '',
+    public: {
+      apiBase: '',
+      jwtCookieName: '',
+    },
+  },
+  // If you have enabled Take Over Mode or installed the TypeScript Vue Plugin (Volar), you can disable generating the shim for *.vue files:
+  typescript: {
+    shim: false,
+  },
 });

@@ -7,6 +7,17 @@
       <template #error> Failed </template>
     </UseImage> -->
 
+    <div class="border p-3 dark:text-semantic-dark" v-if="users">
+      <ul class="space-y-3">
+        <li class="odd:bg-gray-300" v-for="user of users" :key="user._id">
+          Username: {{ user.username }} Name: {{ user.name }} Phone:{{
+            user.phone
+          }}
+          Created: {{ user.created_at }}
+        </li>
+      </ul>
+    </div>
+
     <div class="input-inline">
       <button class="btn btn-primary" @click="increment">ADD+</button>
       <input type="number" class="input" v-model="count" />
@@ -85,6 +96,7 @@
 
 <script setup lang="ts">
 import { UseImage } from '@vueuse/components';
+const { data: users } = await useServerFetch('users');
 
 useHead({
   title: 'Home',
