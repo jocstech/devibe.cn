@@ -1,7 +1,7 @@
 <template>
   <div class="login-box prose">
     <div class="header text-center">
-      <h3>账号登陆</h3>
+      <h3>账号登陆.</h3>
     </div>
     <form class="form" @submit.prevent="login">
       <div class="input-group">
