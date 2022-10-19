@@ -7,9 +7,9 @@
       <template #error> Failed </template>
     </UseImage> -->
 
-    <div class="border p-3 dark:text-semantic-dark" v-if="users">
+    <div class="border p-3 dark:text-semantic-dark" v-if="users.data">
       <ul class="space-y-3">
-        <li class="odd:bg-gray-300" v-for="user of users" :key="user._id">
+        <li class="odd:bg-gray-300" v-for="user of users.data" :key="user._id">
           Username: {{ user.username }} Name: {{ user.name }} Phone:{{
             user.phone
           }}
