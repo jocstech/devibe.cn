@@ -1,14 +1,10 @@
-import { defineNuxtConfig } from 'nuxt';
-
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
   app: {
     head: {
-      htmlAttrs: [
-        {
-          lang: 'en',
-        },
-      ],
+      htmlAttrs: {
+        lang: 'en',
+      },
       title: 'The Best Developer Community',
       titleTemplate: '%s | The Best Developer Community',
       charset: 'utf-8',
