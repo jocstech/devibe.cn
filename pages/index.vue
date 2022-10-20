@@ -7,15 +7,30 @@
       <template #error> Failed </template>
     </UseImage> -->
 
-    <div class="border p-3 dark:text-semantic-dark" v-if="users.data">
-      <ul class="space-y-3">
-        <li class="odd:bg-gray-300" v-for="user of users.data" :key="user._id">
-          Username: {{ user.username }} Name: {{ user.name }} Phone:{{
-            user.phone
-          }}
-          Created: {{ user.created_at }}
-        </li>
-      </ul>
+    <div class="border rounded p-6 dark:text-semantic-dark" v-if="users">
+      <div class="divide-y">
+        <div
+          class="flex place-items-center space-x-2 py-2"
+          v-for="user of users"
+          :key="user._id"
+        >
+          <img
+            class="rounded-full w-10"
+            :src="user.avatar"
+            :alt="user.username"
+          />
+
+          <span class="font-bold text-lg">
+            {{ user.first_name }} {{ user.last_name }}</span
+          >
+          <span class="text-dark-100 dark:text-light-100">
+            ( {{ user.username }} )
+          </span>
+          <span> {{ user.email }} </span>
+          <span> {{ user.phone }} </span>
+          <span> {{ new Date(user.created_at).toLocaleDateString() }} </span>
+        </div>
+      </div>
     </div>
 
     <div class="input-inline">
@@ -96,7 +111,8 @@
 
 <script setup lang="ts">
 import { UseImage } from '@vueuse/components';
-const { data: users } = await useServerFetch('users');
+const { data } = await useServerFetch('users');
+const users = data.value.data;
 
 useHead({
   title: 'Home',

@@ -18,7 +18,7 @@
     >
       <img
         class="rounded-full w-8 p-1px outline outline-light-800"
-        src="https://picsum.photos/200"
+        src="https://api.devibe.cn/upload/avatars/avatar1.jpg"
         :alt="user.username"
       />
       <span class="pl-1">{{ user.nickname }}</span>
