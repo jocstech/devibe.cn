@@ -26,27 +26,31 @@
 const navs = ref([
   {
     to: '/',
-    text: 'home',
+    text: '首页',
+  },
+  {
+    to: '/articles',
+    text: '文章',
   },
   {
     to: '/projects',
-    text: 'projects',
+    text: '项目',
   },
   {
     to: '/projects/the-fancy-switch',
-    text: 'the switch',
+    text: '开关',
   },
   {
     to: '/projects/the-lift',
-    text: 'the lift',
+    text: '电梯',
   },
   {
     to: '/projects/the-lift',
-    text: 'about me',
+    text: '关于作者',
   },
   {
     to: '/profile',
-    text: 'profile',
+    text: '个人中心(加密)',
   },
 ]);
 </script>
