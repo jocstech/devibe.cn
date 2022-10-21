@@ -51,6 +51,7 @@ const navs = ref([
   {
     to: '/profile',
     text: '个人中心(加密)',
+    protected: true,
   },
 ]);
 </script>

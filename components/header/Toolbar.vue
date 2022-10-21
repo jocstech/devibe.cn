@@ -1,6 +1,8 @@
 <template>
   <div class="toolbar flex">
+    <!-- 搜索按钮：常显 -->
     <div
+      ref="searchButton"
       class="search transition bg-secondary hover:bg-indigo-600 px-3 flex items-center justify-center text-white flex items-center justify-center cursor-pointer"
     >
       <svg class="icon-responsive" width="32" height="32" viewBox="0 0 32 32">
@@ -11,8 +13,9 @@
       </svg>
     </div>
 
+    <!-- 已登陆状态:显示用户头像名称 -->
     <div
-      v-if="status"
+      v-show="authenticated"
       class="auth transition bg-primary dark:bg-primary-dark hover:bg-indigo-700 text-white px-3 flex items-center justify-center whitespace-nowrap cursor-pointer text-sm"
       @click="gotoProfilePage"
     >
@@ -21,11 +24,15 @@
         src="https://api.devibe.cn/upload/avatars/avatar1.jpg"
         :alt="user.username"
       />
-      <span class="pl-1">{{ user.nickname }}</span>
+      <div class="name pl-2 flex flex-col place-items-center leading-none">
+        <span class="text-base font-bold">{{ user.nickname }}</span>
+        <span class="text-xs font-thin">{{ user.username }}</span>
+      </div>
     </div>
 
+    <!-- 未登陆状态:显示登录按钮 -->
     <div
-      v-else
+      v-show="!authenticated"
       class="auth transition bg-primary dark:bg-primary-dark hover:bg-indigo-700 text-white px-3 flex items-center justify-center whitespace-nowrap cursor-pointer text-sm"
       @click="gotoLoginPage"
     >
@@ -38,6 +45,7 @@
       <span class="-md:hidden">登陆</span>
     </div>
 
+    <!-- 色彩模式切换键 -->
     <div class="flex-center w-8 md:w-14">
       <SharedThemeToggle />
     </div>
@@ -46,10 +54,20 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
+import { useElementHover } from '@vueuse/core';
+const { authenticated, user } = useAuth();
 
-const { status, user } = useAuth();
+// 搜索栏UI逻辑
+const searchButton = ref();
+const showSearchBar = useShowSearchBar();
+const isSearchButtonHovered = useElementHover(searchButton);
+
+watch(isSearchButtonHovered, (value) => {
+  showSearchBar.value = value;
+});
 
 const router = useRouter();
+
 function gotoLoginPage() {
   router.push('/auth/login');
 }

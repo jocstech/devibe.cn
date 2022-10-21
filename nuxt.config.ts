@@ -50,7 +50,7 @@ export default defineNuxtConfig({
     apiSecret: '',
     public: {
       apiBase: '',
-      jwtCookieName: '',
+      jwtName: '',
     },
   },
   // If you have enabled Take Over Mode or installed the TypeScript Vue Plugin (Volar), you can disable generating the shim for *.vue files:

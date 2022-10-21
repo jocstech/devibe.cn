@@ -1,16 +1,16 @@
 export default defineNuxtRouteMiddleware((to, from) => {
   const protectedRoutes = ['profile'];
-  const { status, user } = useAuth();
 
+  const { authenticated, user } = useAuth();
+
+  // 检查是否命中保护路径
   if (protectedRoutes.includes(<any>to.name)) {
     // 检查是否为登陆状态
-    if (status.value) {
-      // 如果是登陆状态
-    } else {
+    if (!authenticated.value) {
       return navigateTo({
         path: '/auth/login',
         query: {
-          redirectUrl: to.fullPath,
+          redirect: to.fullPath,
         },
       });
     }

@@ -96,7 +96,7 @@ body::-webkit-scrollbar {
 }
 
 .input-inline {
-  box-shadow: 0 0 1rem 4px #eee;
+  @apply shadow dark:shadow-none
   :first-child {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;

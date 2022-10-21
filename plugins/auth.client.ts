@@ -6,7 +6,7 @@ interface Credential {
 }
 
 export default defineNuxtPlugin((nuxt) => {
-  const redirectUrl = nuxt.$router.currentRoute.value.query.redirectUrl ?? '/';
+  const redirectUrl = nuxt.$router.currentRoute.value.query.redirect ?? '/';
 
   return {
     provide: {

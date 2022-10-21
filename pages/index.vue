@@ -112,7 +112,7 @@
 <script setup lang="ts">
 import { UseImage } from '@vueuse/components';
 const { data } = await useServerFetch('users');
-const users = data.value.data;
+const users = data?.value?.data;
 
 useHead({
   title: 'Home',
