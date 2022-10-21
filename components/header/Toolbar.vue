@@ -15,7 +15,7 @@
 
     <!-- 已登陆状态:显示用户头像名称 -->
     <div
-      v-show="authenticated"
+      v-if="authenticated"
       class="auth transition bg-primary dark:bg-primary-dark hover:bg-indigo-700 text-white px-3 flex items-center justify-center whitespace-nowrap cursor-pointer text-sm"
       @click="gotoProfilePage"
     >
@@ -32,7 +32,7 @@
 
     <!-- 未登陆状态:显示登录按钮 -->
     <div
-      v-show="!authenticated"
+      v-if="!authenticated"
       class="auth transition bg-primary dark:bg-primary-dark hover:bg-indigo-700 text-white px-3 flex items-center justify-center whitespace-nowrap cursor-pointer text-sm"
       @click="gotoLoginPage"
     >
