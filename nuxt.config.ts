@@ -1,5 +1,18 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
+  runtimeConfig: {
+    apiSecret: process.env.NUXT_API_SECRET,
+    public: {
+      apiBaseUrl:
+        process.env.NUXT_PUBLIC_API_BASE_URL || 'http://localhost:4500/v1',
+      jwtKey: process.env.NUXT_PUBLIC_JWT_KEY || '_devibe_current_jwt_',
+      authStateKey:
+        process.env.NUXT_PUBLIC_AUTH_STATE_KEY || '_devibe_current_auth_state_',
+      systemUserKey:
+        process.env.NUXT_PUBLIC_SYSTEM_USER_KEY ||
+        '_devibe_current_system_user_',
+    },
+  },
   app: {
     head: {
       htmlAttrs: {
@@ -56,13 +69,6 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@unocss/nuxt',
   ],
-  runtimeConfig: {
-    apiSecret: '',
-    public: {
-      apiBase: '',
-      jwtName: '',
-    },
-  },
   // If you have enabled Take Over Mode or installed the TypeScript Vue Plugin (Volar), you can disable generating the shim for *.vue files:
   typescript: {
     shim: false,

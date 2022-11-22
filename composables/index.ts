@@ -1,6 +1,5 @@
 import { useJwt } from '@vueuse/integrations/useJwt';
 import { useLocalStorage } from '@vueuse/core';
-import configs from '~/configs';
 
 // UI逻辑相关
 export const useOnTop = () => {
@@ -13,9 +12,10 @@ export const useShowSearchBar = () => {
 
 // 鉴权系统相关
 export const useAuth = () => {
+  const config = useRuntimeConfig();
   const user = useState('user', () => null);
   const authenticated = useState('authenticated', () => false);
-  const localJWT = useLocalStorage(configs.jwtKey, null);
+  const localJWT = useLocalStorage(config.public.jwtKey, null);
 
   // Token登陆逻辑
   const auth = (jwt: string) => {

@@ -1,5 +1,3 @@
-import configs from '~~/configs';
-
 //基于useFetch的自定义API服务封装
 enum HTTP_METHODS {
   GET = 'GET',
@@ -19,8 +17,10 @@ export const useRequest = () => {
     // 'Content-Type': 'application/json';
     //'Authorization': 'Bearer xxx'
 
+    const config = useRuntimeConfig();
+
     return useFetch<T>(path, {
-      baseURL: configs.apiBaseUrl,
+      baseURL: config.public.apiBaseUrl,
       method,
       body,
       headers: {

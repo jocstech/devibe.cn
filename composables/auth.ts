@@ -1,9 +1,11 @@
-import { useAuthStore } from '~~/store/auth';
-
 enum API {
   LOGIN = '/auth/login',
   SIGNUP = '/auth/signup',
   LOGOUT = '/auth/logout',
+}
+
+interface LoginResult {
+  token: string;
 }
 
 const request = useRequest();
@@ -12,13 +14,16 @@ const request = useRequest();
 export const useAuthentication = () => {
   return {
     login: async (credential: Credential): Promise<string | void> => {
-      const { data, error } = await request.post(API.LOGIN, credential);
+      const { data, error } = await request.post<Response<LoginResult>>(
+        API.LOGIN,
+        credential
+      );
       if (error.value) {
         console.error(error.value);
         return;
       }
       // 成功获取JWT
-      return unref(data).data.token;
+      return unref(data)?.data.token;
     },
   };
 };

@@ -81,11 +81,11 @@
 </template>
 
 <script setup lang="ts">
-useHead({
-  title: 'Home',
-});
+  useHead({
+    title: 'Home',
+  });
 
-const count = ref(0);
-const increment = () => count.value++;
-const reduction = () => count.value--;
+  const count = ref(0);
+  const increment = () => count.value++;
+  const reduction = () => count.value--;
 </script>

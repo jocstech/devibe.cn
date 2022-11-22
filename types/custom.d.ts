@@ -1,7 +1,7 @@
 interface Response<T> {
   code: number;
   message: string;
-  data: T | T[];
+  data: T;
   type: string;
 }
 

@@ -1,7 +1,9 @@
 // store/auth.ts
-import { useJwt } from '@vueuse/integrations/useJwt';
+import { useAuthentication } from '~/composables/auth';
 
 const auth = useAuthentication();
+
+import { useJwt } from '@vueuse/integrations/useJwt';
 
 export const useAuthStore = defineStore('auth', {
   state: () => ({

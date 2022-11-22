@@ -31,7 +31,7 @@
   const request = useRequest();
   const articles = ref();
 
-  const { data, error } = await request.get<Response<CRMArticle>>('/articles');
+  const { data, error } = await request.get<Response<CRMArticle[]>>('/articles');
   if (data.value) {
     articles.value = data.value.data;
   }
