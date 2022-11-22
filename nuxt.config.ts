@@ -41,11 +41,21 @@ export default defineNuxtConfig({
     },
   },
   css: [
+    '@unocss/reset/tailwind.css',
     '@/assets/css/main.scss',
     '@/assets/css/typography.scss',
     '@/assets/css/animation.scss',
   ],
-  modules: ['@vueuse/nuxt', 'nuxt-windicss'],
+  modules: [
+    [
+      '@pinia/nuxt',
+      {
+        autoImports: ['defineStore', 'acceptHMRUpdate'],
+      },
+    ],
+    '@vueuse/nuxt',
+    '@unocss/nuxt',
+  ],
   runtimeConfig: {
     apiSecret: '',
     public: {

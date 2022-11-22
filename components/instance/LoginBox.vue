@@ -56,12 +56,15 @@
 
 <script setup lang="ts">
 import { ref, reactive } from 'vue';
-const { $login } = useNuxtApp();
+import { useAuthStore } from '~~/store/auth';
+
+const authStore = useAuthStore();
+
 const isTermChecked = ref(true);
 const isLoading = ref(false);
-const errorMsg = ref(null);
+const errorMsg = ref();
 
-const credential = reactive({
+const credential = reactive(<Credential>{
   username: 'jocstech',
   password: '135246999',
 });
@@ -76,7 +79,7 @@ const login = async () => {
   errorMsg.value = null;
 
   if (credential.username && credential.password) {
-    await $login(credential);
+    await authStore.login(credential);
   } else {
     errorMsg.value = '请检查你的用户名或者密码';
     console.error(errorMsg.value);

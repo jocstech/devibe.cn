@@ -1,8 +1,8 @@
 <template>
   <div ref="searchBar" class="searchbar" :class="{ show: showSearchBar }">
-    <div class="sm:container sm:mx-auto flex place-items-center">
+    <div flex place-items-center sm="container mx-auto">
       <input
-        class="w-full transition-all rounded p-2 outline-none border border-2 border-transparent hover:border-gray-300"
+        class="w-full transition-all rounded p-2 outline-none border border-2 border-transparent hover:border-gray-600"
         type="text"
         placeholder="输入您要搜索的内容..."
       />

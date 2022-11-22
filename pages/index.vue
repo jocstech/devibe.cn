@@ -1,45 +1,16 @@
 <template>
   <div
-    class="container mx-auto view flex flex-col place-items-center gap-6 my-16 p-4 sm:p-0 animate-animated animate-fadeIn"
+    container
+    mx-auto
+    class="mx-auto view flex flex-col place-items-center gap-6 my-16 p-4 sm:p-0 animate-animated animate-fadeIn"
   >
-    <!-- <UseImage v-for="n of 100" :src="`https://via.placeholder.com/${1 + n}`">
-      <template #loading> Loading.. </template>
-      <template #error> Failed </template>
-    </UseImage> -->
-
-    <div class="border rounded p-6 dark:text-semantic-dark" v-if="users">
-      <div class="divide-y">
-        <div
-          class="flex place-items-center space-x-2 py-2"
-          v-for="user of users"
-          :key="user._id"
-        >
-          <img
-            class="rounded-full w-10"
-            :src="user.avatar"
-            :alt="user.username"
-          />
-
-          <span class="font-bold text-lg">
-            {{ user.first_name }} {{ user.last_name }}</span
-          >
-          <span class="text-dark-100 dark:text-light-100">
-            ( {{ user.username }} )
-          </span>
-          <span> {{ user.email }} </span>
-          <span> {{ user.phone }} </span>
-          <span> {{ new Date(user.created_at).toLocaleDateString() }} </span>
-        </div>
-      </div>
-    </div>
-
     <div class="input-inline">
       <button class="btn btn-primary" @click="increment">ADD+</button>
       <input type="number" class="input" v-model="count" />
       <button class="btn btn-primary" @click="reduction">MINS-</button>
     </div>
 
-    <article class="prose dark:prose-indigo text-center w-full">
+    <article class="prose text-center w-full">
       <h1>大标题</h1>
       <h2>小标题</h2>
       <a href="#">Link</a>
@@ -110,10 +81,6 @@
 </template>
 
 <script setup lang="ts">
-import { UseImage } from '@vueuse/components';
-const { data } = await useServerFetch('users');
-const users = data?.value?.data;
-
 useHead({
   title: 'Home',
 });
