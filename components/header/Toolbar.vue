@@ -57,6 +57,7 @@
       hover="bg-blue-800"
       cursor-pointer
       class="search"
+      @click="toggleSearchBar()"
     >
       <div i="carbon-search"></div>
     </div>
@@ -69,26 +70,25 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
-import { useElementHover } from '@vueuse/core';
-import { useAuthStore } from '~~/store/auth';
-const auth = useAuthStore();
+  import { ref } from 'vue';
 
-// 搜索栏UI逻辑
-const searchButton = ref();
-const showSearchBar = useShowSearchBar();
-const isSearchButtonHovered = useElementHover(searchButton);
+  import { useAuthStore } from '~~/store/auth';
+  const auth = useAuthStore();
 
-watch(isSearchButtonHovered, (value) => {
-  showSearchBar.value = value;
-});
+  // 搜索栏UI逻辑
+  const searchButton = ref();
+  const showSearchBar = useShowSearchBar();
 
-const router = useRouter();
+  function toggleSearchBar() {
+    showSearchBar.value = !showSearchBar.value;
+  }
 
-function gotoLoginPage() {
-  router.push('/auth/login');
-}
-function gotoProfilePage() {
-  router.push('/profile');
-}
+  const router = useRouter();
+
+  function gotoLoginPage() {
+    router.push('/auth/login');
+  }
+  function gotoProfilePage() {
+    router.push('/profile');
+  }
 </script>
