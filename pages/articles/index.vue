@@ -3,7 +3,7 @@
     <div mx-1 sm:mx-0 my-16 class="articles">
       <ul space-y-2 v-if="articles">
         <li v-for="article of articles" :keys="article._id">
-          <nuxt-link to="#">
+          <nuxt-link :to="`/article/${article.slug}`">
             <div flex h-32 gap-sm md="h-48 gap-lg" overflow-hidden>
               <div aspect-square md:aspect-video flex place-items-center class="cover">
                 <img w-full h-full object-cover :src="article.cover" :alt="article.title" />

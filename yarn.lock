@@ -769,7 +769,7 @@
   dependencies:
     "@unocss/core" "0.46.5"
 
-"@unocss/preset-typography@0.46.5":
+"@unocss/preset-typography@0.46.5", "@unocss/preset-typography@^0.46.5":
   version "0.46.5"
   resolved "https://registry.npmmirror.com/@unocss/preset-typography/-/preset-typography-0.46.5.tgz#26ed8895915e6cfea7dd8a261519c2241d24a350"
   integrity sha512-wAf9XNNzJWrXEFWuEUXfY5Jmx7HPv5Mi+3EkOcPi8at7lcncWkF0PmLY/nI95nfXQZipkV+aDyHp3TsDn9FgAw==
@@ -1073,11 +1073,6 @@
   integrity sha512-HnnCWU1Vg9CVWRCcI8ohDKDRB2Sc4bTgT1XAIaoLSfVHHn+TKbrox6pd3klCSw4UDxkhDfOk8cAdcK+Z5KleCA==
   dependencies:
     vue-demi "*"
-
-"@windicss/plugin-animations@^1.0.9":
-  version "1.0.9"
-  resolved "https://registry.npmmirror.com/@windicss/plugin-animations/-/plugin-animations-1.0.9.tgz#abd7c82d906ebd7d61cdc62a3019b60e8c57ca72"
-  integrity sha512-9WsQsPzLurkwV5zaMCwmylxfSHlQ1pPmzud4ysvMkMBRB7obub9ESmqlHefcCjEhatz/ZROi1U1XOuOPPUO1nA==
 
 "@zhead/schema@^1.0.3":
   version "1.0.3"

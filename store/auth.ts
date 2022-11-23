@@ -12,18 +12,20 @@ export const useAuthStore = defineStore('auth', {
   }),
   actions: {
     async login(credential: Credential) {
-      const token = await auth.login(credential);
-      if (token) {
+      const token = await auth.login(credential); // api call to auth
+      if (!token) return console.error('没有获得令牌'); //无法取得令牌，直接报错
+
+      const { payload } = useJwt<SystemUser>(token); // 从令牌中解析出用户信息
+
+      if (unref(payload)?._id) {
+        // 通过令牌解析后才能合法使用
         this.token = token;
-        const { header, payload } = useJwt(token);
-        console.log(header);
         this.user = payload.value;
       }
     },
     logout() {
       this.user = null;
       this.token = null;
-      localStorage.removeItem('auth');
     },
   },
   persist: true,
