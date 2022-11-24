@@ -1,13 +1,23 @@
 <template>
-  <div ref="searchBar" class="searchBar" :class="showSearchBar ? 'show' : 'hide'">
-    <div flex place-items-center sm="container mx-auto">
-      <input
-        class="w-full transition-all rounded p-2 outline-none border border-2 border-transparent hover:border-gray-600"
-        type="text"
-        placeholder="输入您要搜索的内容..."
-      />
+  <ClientOnly>
+    <div ref="searchBar" class="searchBar" :class="showSearchBar ? 'show' : 'hide'">
+      <div flex place-items-center sm="container mx-auto">
+        <input
+          w-full
+          transition-all
+          rounded
+          p-2
+          outline-none
+          border
+          border-2
+          border-transparent
+          hover:border-gray-600
+          type="text"
+          placeholder="输入您要搜索的内容..."
+        />
+      </div>
     </div>
-  </div>
+  </ClientOnly>
 </template>
 
 <script setup lang="ts">
