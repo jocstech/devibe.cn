@@ -1,7 +1,5 @@
 <template>
-  <nav
-    class="px-2 py-3 flex w-full justify-center whitespace-nowrap overflow-hidden <sm:hidden"
-  >
+  <nav class="px-2 py-3 flex w-full justify-center whitespace-nowrap overflow-hidden <sm:hidden">
     <ul
       class="flex justify-center gap-3 text-xs font-light sm:text-sm md:text-md lg:text-lg xl:text-xl capitalize"
     >
@@ -17,41 +15,36 @@
 </template>
 
 <style lang="scss" scoped>
-.router-link-exact-active {
-  @apply text-primary;
-}
+  .router-link-exact-active {
+    @apply text-primary;
+  }
 </style>
 
 <script lang="ts" setup>
-const navs = ref([
-  {
-    to: '/',
-    text: '首页',
-  },
-  {
-    to: '/articles',
-    text: '文章',
-  },
-  {
-    to: '/projects',
-    text: '项目',
-  },
-  {
-    to: '/projects/the-fancy-switch',
-    text: '开关',
-  },
-  {
-    to: '/projects/the-lift',
-    text: '电梯',
-  },
-  {
-    to: '/projects/the-lift',
-    text: '关于作者',
-  },
-  {
-    to: '/profile',
-    text: '个人中心(加密)',
-    protected: true,
-  },
-]);
+  const navs = ref([
+    {
+      to: '/',
+      text: '首页',
+    },
+    {
+      to: '/articles',
+      text: '文章',
+    },
+    {
+      to: '/projects',
+      text: '项目',
+    },
+    {
+      to: '/projects/the-fancy-switch',
+      text: '开关',
+    },
+    {
+      to: '/projects/the-lift',
+      text: '电梯',
+    },
+    {
+      to: '/projects/the-lift',
+      text: '关于作者',
+    },
+  ]);
 </script>
