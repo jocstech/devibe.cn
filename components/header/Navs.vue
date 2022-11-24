@@ -35,16 +35,16 @@
       text: '项目',
     },
     {
-      to: '/projects/the-fancy-switch',
-      text: '开关',
+      to: '/frontend',
+      text: '前端',
     },
     {
-      to: '/projects/the-lift',
-      text: '电梯',
+      to: '/backend',
+      text: '后端',
     },
     {
-      to: '/projects/the-lift',
-      text: '关于作者',
+      to: '/resume',
+      text: '履历',
     },
   ]);
 </script>
