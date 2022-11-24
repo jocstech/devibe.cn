@@ -11,7 +11,7 @@
     :class="onTop ? 'onTop' : 'offTop'"
     class="header"
   >
-    <div flex="~" class="sm:container sm:mx-auto justify-between">
+    <div flex sm:container sm:mx-auto justify-between>
       <HeaderBranding class="flex-shrink-0 m-2 w-90px md:w-120px" />
       <HeaderNavs />
       <HeaderToolbar class="flex-shrink-0" />
