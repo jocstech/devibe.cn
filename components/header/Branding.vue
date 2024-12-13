@@ -1,9 +1,15 @@
+<!--
+ * @Author       : Yulong Fang <aionv@qq.com>
+ * @Date         : 2024-12-13 11:24:10
+ * @LastEditors  : Yulong Fang <aionv@qq.com>
+ * @LastEditTime : 2024-12-13 11:43:53
+ * @Description  :  
+-->
 <template>
   <div class="branding flex flex-col justify-center">
     <nuxt-link to="/">
       <div class="logo">
-        <img v-show="isDark" :src="logoDark" alt="Devibe.cn Logo" />
-        <img v-show="!isDark" :src="logoLight" alt="Devibe.cn Logo" />
+        <h1 class="text-xl text-blue font-500 shadow">开发者氛围</h1>
       </div>
     </nuxt-link>
   </div>

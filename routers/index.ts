@@ -1,3 +1,10 @@
+/*
+ * @Author       : Yulong Fang <aionv@qq.com>
+ * @Date         : 2024-12-13 11:24:10
+ * @LastEditors  : Yulong Fang <aionv@qq.com>
+ * @LastEditTime : 2024-12-13 11:37:39
+ * @Description  :  
+ */
 interface MenuItem {
   to: string;
   en: string;
@@ -9,8 +16,8 @@ export const menuData = {
     [
       {
         to: '/',
-        en: 'home',
-        text: '首页',
+        en: '开发者氛围',
+        text: '开发者氛围',
       },
       {
         to: '/awesome',
